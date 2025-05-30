@@ -1,0 +1,147 @@
+#demo {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.section-desc {
+    color: #000;
+}
+
+.demo-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.phone-mockup {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.phone-mockup img {
+    height: 600px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.arrow-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-btn.prev {
+    left: 30px;
+}
+
+.arrow-btn.next {
+    right: 30px;
+}
+
+.arrow-btn i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.demo-indicators {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.demo-indicators span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.demo-indicators span.active {
+    background: var(--color-primary);
+}
+
+.demo-features {
+    flex: 1;
+}
+
+.demo-feature {
+    margin-bottom: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.demo-feature.active {
+    opacity: 1;
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    transform: translateX(-0.7rem);
+}
+
+@media (max-width: 768px) {
+    .phone-mockup img {
+        height: 400px;
+        width: 200px;
+    }
+
+    .arrow-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .arrow-btn.prev {
+        left: -50px;
+    }
+
+    .arrow-btn.next {
+        right: -50px;
+    }
+
+    .demo-feature.active {
+        display: block;
+        text-align: center;
+        transform: translateX(0);
+    }
+    .demo-feature {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .arrow-btn.prev {
+        left: -70px;
+    }
+
+    .arrow-btn.next {
+        right: -70px;
+    }
+
+    .demo-feature.active {
+        transform: translateX(0);
+    }
+}
