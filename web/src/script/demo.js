@@ -2,25 +2,25 @@ export class DemoCarousel {
     constructor() {
         this.slides = [
             {
-                image: "/web/src/assets/images/interface1.webp",
+                image: "src/assets/images/interface1.webp",
                 title: "Interface Intuitiva",
                 description:
                     "Acesso rápido a todas as funcionalidades com apenas alguns toques.",
             },
             {
-                image: "/web/src/assets/images/interface2.webp",
+                image: "src/assets/images/interface2.webp",
 
                 title: "Botão de Pânico",
                 description:
                     "Acionamento discreto para situações de emergência.",
             },
             {
-                image: "/web/src/assets/images/interface3.webp",
+                image: "src/assets/images/interface3.webp",
                 title: "Chat Seguro",
                 description: "Comunicação criptografada com profissionais.",
             },
             {
-                image: "/web/src/assets/images/interface4.webp",
+                image: "src/assets/images/interface4.webp",
 
                 title: "Seção de Contatos",
                 description:
