@@ -5,12 +5,12 @@ export function initAnimations() {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("ativo");
+                    entry.target.classList.add("active-animation");
                 }
             });
         },
         {
-            threshold: 0.011, // Exibe quando pelo menos 1% aparece
+            threshold: 0.2,
         }
     );
 

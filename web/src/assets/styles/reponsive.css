@@ -3,11 +3,6 @@
         text-align: center;
     }
 
-    .demo-container {
-        flex-direction: column;
-        gap: var(--spacing-lg);
-    }
-
     .phone-mockup img {
         max-width: 100%;
     }
@@ -54,11 +49,6 @@
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: var(--spacing-md);
     }
 }
 

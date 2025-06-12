@@ -53,8 +53,7 @@
     background: linear-gradient(
         135deg,
         rgba(82, 59, 141, 0.1),
-        /* var(--color-primary) com transparência */ rgba(24, 0, 58, 0.1)
-            /* var(--color-secondary) com transparência */
+        rgba(24, 0, 58, 0.1)
     );
     transform: scaleY(0);
     transform-origin: bottom;
@@ -70,7 +69,6 @@
     transform: scaleY(1);
 }
 
-/* Garantir que os elementos dentro do card fiquem acima do overlay */
 .feature-icon,
 .feature-card h3,
 .feature-card p {
