@@ -53,6 +53,7 @@
     line-height: 1.8;
     color: var(--color-gray-medium);
     margin-bottom: var(--spacing-lg);
+    text-align: justify;
 }
 
 .stats {

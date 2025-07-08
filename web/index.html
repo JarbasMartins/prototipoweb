@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prototipo WEB</title>
+        <title>Site Lumi</title>
         <link rel="stylesheet" href="src/assets/styles/style.css" />
         <link
             rel="stylesheet"
@@ -23,7 +23,7 @@
             <div class="spinner"></div>
         </div>
         <div>
-            <!-- header -->
+            <!-- header/hero -->
             <div class="block">
                 <header>
                     <div class="logo">Lumi</div>
@@ -55,9 +55,11 @@
                             </div>
                         </div>
                     </nav>
-                    <button class="btn-quote" onclick="modal()">
-                        Cadastro
-                    </button>
+                    <button class="btn-open-auth btn-quote">Cadastro</button>
+                    <div class="user-info" id="userInfo">
+                        <span class="show-name"></span>
+                        <button id="logout-btn" class="logout-btn">Sair</button>
+                    </div>
                 </header>
                 <div class="hero">
                     <img
@@ -76,7 +78,7 @@
                             esperança.
                         </p>
                         <button
-                            class="button-app"
+                            class="btn-open-auth button-app"
                             type="button"
                             aria-label="Botão Baixar BlueStacks"
                         >
@@ -86,11 +88,116 @@
                                 <p class="title">Baixar Lumi</p>
                             </div>
                         </button>
+                        <p>(Faça registro para instalar o aplicativo.)</p>
                     </div>
                 </div>
             </div>
 
-            <!-- hero -->
+            <!-- Modal de Download -->
+            <div class="download-modal-overlay" id="downloadModal">
+                <div class="download-modal">
+                    <button class="close-modal" id="closeDownloadModal">
+                        &times;
+                    </button>
+                    <h2>Baixar Lumi</h2>
+                    <p>
+                        Obrigado por estar conosco! Clique abaixo para baixar o
+                        app:
+                    </p>
+                    <a href="#" class="download-btn">Download do APP</a>
+                </div>
+            </div>
+
+            <!-- Modal único -->
+            <div class="auth-modal-overlay" id="authModal">
+                <div class="auth-modal">
+                    <button class="close-modal" id="closeModal">&times;</button>
+
+                    <!-- Abas -->
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">
+                            Login
+                        </button>
+                        <button class="auth-tab" data-tab="register">
+                            Registro
+                        </button>
+                    </div>
+
+                    <!-- Formulário de Login -->
+                    <div class="auth-form login-form active" id="loginForm">
+                        <form>
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input
+                                    type="email"
+                                    id="login-email"
+                                    placeholder="Seu email"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Senha</label>
+                                <input
+                                    type="password"
+                                    id="login-password"
+                                    placeholder="Sua senha"
+                                    required
+                                />
+                            </div>
+
+                            <button type="submit" class="button-login">
+                                Entrar
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Formulário de Registro -->
+                    <div class="auth-form register-form" id="registerForm">
+                        <form>
+                            <div class="form-group">
+                                <label for="reg-nome">Nome Completo</label>
+                                <input
+                                    type="text"
+                                    id="reg-nome"
+                                    placeholder="Seu nome completo"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-endereco">Endereço</label>
+                                <input
+                                    type="text"
+                                    id="reg-endereco"
+                                    placeholder="Seu endereço"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email">Email</label>
+                                <input
+                                    type="email"
+                                    id="reg-email"
+                                    placeholder="Seu email"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-senha">Senha</label>
+                                <input
+                                    type="password"
+                                    id="reg-senha"
+                                    placeholder="Sua senha"
+                                    required
+                                />
+                            </div>
+                            <span>(UTILIZE DADOS FICTÍCIOS)</span>
+                            <button type="submit" class="button-register">
+                                Cadastrar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
             <!-- sobre o app -->
             <section id="sobre-app">
@@ -107,11 +214,13 @@
                         <div class="sobre-text animation">
                             <h3>Um aplicativo que faz a diferença</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Id expedita reiciendis itaque
-                                unde amet harum nihil maxime illum doloremque,
-                                corporis perspiciatis aperiam est placeat, ea
-                                quo quisquam velit dolore animi!
+                                A Lumi é um aplicativo criado para oferecer
+                                apoio, proteção e orientação a pessoas em
+                                situação de vulnerabilidade. Esse aplicativo
+                                atua como uma rede de suporte segura e
+                                acessível, nosso objetivo é garantir que ninguém
+                                se sinta sozinha em momentos difíceis — estamos
+                                aqui, sempre.
                             </p>
                             <div class="stats">
                                 <div class="stat-item">
@@ -429,7 +538,7 @@
                 </div>
 
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Lumi. Todos os direitos reservados.</p>
+                    <p>&copy; 2025 Lumi. Todos os direitos reservados.</p>
                     <div class="footer-links">
                         <a href="#">Privacidade</a>
                         <a href="#">Termos de Uso</a>
