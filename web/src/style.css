@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url(./styles/geral.css);
+@import url(./styles/hero.css);
+@import url(./styles/reponsive.css);
+@import url(./styles/about.css);
+@import url(./styles/funcionalidades.css);
+@import url(./styles/demo.css);
+@import url(./styles/testimonials.css);
+@import url(./styles/faq.css);
+@import url(./styles/contato.css);
+@import url(./styles/form.css);

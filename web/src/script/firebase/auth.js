@@ -111,7 +111,7 @@ const handleAuthStateChange = (user) => {
 export function modalController() {
     const authModal = document.getElementById("authModal");
     const openButtons = document.querySelectorAll(".btn-open-auth");
-    const closeModal = document.getElementById("closeModal");
+    const closeMOdalBtn = document.querySelectorAll(".close-modal");
 
     const tabs = document.querySelectorAll(".auth-tab");
     const loginFormSection = document.getElementById("loginForm");
@@ -129,6 +129,13 @@ export function modalController() {
                 tabs[0].classList.add("active");
                 tabs[1].classList.remove("active");
             }
+        });
+    });
+
+    closeMOdalBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            authModal.style.display = "none";
+            document.getElementById("downloadModal").style.display = "none";
         });
     });
 

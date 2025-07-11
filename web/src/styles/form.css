@@ -13,12 +13,16 @@
 
 .auth-modal {
     background: #ffffff;
-    padding: 24px;
+    padding: 36px;
     border-radius: 12px;
     width: 90%;
     max-width: 400px;
     position: relative;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.download-modal {
+    position: relative;
 }
 
 .close-modal {
